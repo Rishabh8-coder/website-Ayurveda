@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Life Ayurveda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #c62828;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background-color: #b71c1c;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            color: #006837;
+            display: inline-block;
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .section-title h2::before {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: #8dc63f;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .flower-icon {
+            color: #8dc63f;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Header Styles */
+        .top-bar {
+            background-color: #c62828;
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info span {
+            margin-right: 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .search-bar {
+            display: flex;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            background-color: #006837;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-actions a {
+            margin-left: 15px;
+            color: #333;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #c62828;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background-color: #f5f5f5;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 15px 20px;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #006837;
+        }
+
+        .nav-menu .has-dropdown::after {
+            content: '▼';
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #ffe0b2;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            color: #c62828;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Product Categories */
+        .categories {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-img {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
+
+        .category-icon {
+            font-size: 64px;
+            color: #006837;
+        }
+
+        .category-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .category-info h3 {
+            color: #006837;
+            margin-bottom: 10px;
+        }
+
+        .category-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Product Listings */
+        .products {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            height: 310px;
+            width: 309px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            padding: 24px;
+        }
+
+        .product-img img {
+            max-height: 120%;
+            max-width: 190%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .product-price {
+            color: #c62828;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            color: #ffc107;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            background-color: #006837;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            color: #006837;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        /* Capabilities */
+        .capabilities {
+            padding: 60px 0;
+            background-color: #f0f7f4;
+        }
+
+        .capability-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .capability-item {
+            width: 150px;
+            height: 150px;
+            background-color: #006837;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            color: white;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .capability-item:nth-child(even) {
+            background-color: #8dc63f;
+        }
+
+        .capability-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            width: 20px;
+            height: 2px;
+            background-color: #ddd;
+        }
+
+        .capability-item:last-child::after {
+            display: none;
+        }
+
+        .capability-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            background-color: #e0e0e0;
+        }
+
+        .testimonial-author h4 {
+            color: #333;
+        }
+
+        .testimonial-author p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .testimonial-text {
+            color: #555;
+            font-style: italic;
+            position: relative;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            font-size: 60px;
+            color: #e0e0e0;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            z-index: -1;
+        }
+
+        /* Certifications */
+        .certifications {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .certification-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .certification-item {
+            max-width: 120px;
+            filter: grayscale(100%);
+            transition: all 0.3s;
+        }
+
+        .certification-item:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: 60px 0;
+            background-color: #006837;
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 12px 20px;
+            background-color: #c62828;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f5f5f5;
+            padding-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #006837;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #006837;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-item {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-item:hover {
+            background-color: #006837;
+            color: white;
+        }
+
+        .footer-bottom {
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .header-content {
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .category-grid,
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 12px 20px;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-info span {
+                margin-bottom: 5px;
+            }
+
+            .capability-item {
+                width: 120px;
+                height: 120px;
+            }
+
+            .feature-card {
+                padding: 20px 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .category-grid,
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 24px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+                border-radius: 4px;
+            }
+
+            .newsletter-form button {
+                margin-top: 10px;
+            }
+
+            .capability-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .capability-item::after {
+                right: 50%;
+                bottom: -20px;
+                top: auto;
+                width: 2px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    +919580263943</span>
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    rishabhdubey508@gmail.com</span>
+            </div>
+            <div class="language-selector">
+                English
+                Hindi
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="Ayurvade23.jpg" alt="Eternal Life Ayurveda Logo">
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="I'm looking for.....">
+                    <button>Search</button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="account">My Account</a>
+                    <a href="#" class="cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Cart
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="menu-toggle">☰</div>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="has-dropdown">Shop</a></li>
+                <li><a href="#" class="has-dropdown">Health</a></li>
+                <li><a href="#" class="has-dropdown">Wellness</a></li>
+                <li><a href="#" class="has-dropdown">Personal Care</a></li>
+                <li><a href="#" class="has-dropdown">About Us</a></li>
+                <li><a href="#" class="has-dropdown">Consult</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our Bestselling Products</h1>
+                <p>Unlock the essence of Ayurveda with our premium products, crafted for holistic healing and lasting wellness.</p>
+                <a href="#" class="btn">SHOP NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    
+
+    <!-- Product Listings -->
+    <section class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="flower-icon">✿</span> OUR PRODUCTS</h2>
+                <p>Ayurvedic Product Category</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="gunae.webp" alt="Redisurge Gold Capsules">
+                    </div>
+                    <div class="product-info">
+                        <h3>Redisurge Gold </h3>
+                        <div class="rating">★★★★☆</div>
+                        <div class="product-price">₹1,495.00</div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="vitamin c.webp" alt="Triotone Capsules">
+                    </div>
+                    <div class="product-info">
+                        <h3>Triotone Capsules</h3>
+                        <div class="rating">★★★★★</div>
+                        <div class="product-price">₹805.00</div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Energy.webp" alt="Shilajit">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Shilajit Resin For Energy & Vitality</h3>
+                        <div class="rating">★★★★☆</div>
+                        <div class="product-price">₹650.00</div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Cosmico.webp" alt="Cosmico Power">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cosmico Power for Men's Energy & Muscle Growthr</h3>
+                        <div class="rating">★★★★★</div>
+                        <div class="product-price">₹875.00</div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Herbal.webp" alt="Cosmico Power">
+                    </div>
+                    <div class="product-info">
+                        <h3>Herbal Ubtan Skin Scrub for Glowing Skin</h3>
+                        <div class="rating">★★★★★</div>
+                        <div class="product-price">₹875.00</div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="kumkumadi1.webp" alt="Cosmico Power">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kumkumadi Tailam Face Oil for Glowing Skin</h3>
+                        <div class="rating">★★★★★</div>
+                        <div class="product-price">₹875.00</div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="bone.webp" alt="bone ">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bone Essential - Ayurvedic Pain Oil & Joint Health</h3>
+                        <div class="rating">★★★★★</div>
+                        <div class="product-price">₹875.00</div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="DIABETOR_11.webp" alt="diabetor">
+                    </div>
+                    <div class="product-info">
+                        <h3>Diabetor for Blood Sugar & Diabetes Control</h3>
+                        <div class="rating">★★★★★</div>
+                        <div class="product-price">₹875.00</div>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#" class="btn">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="flower-icon">✿</span> PRODUCT CLASSIFICATIONS</h2>
+                <p>Explore a wide range of Products</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-img">
+                        <div class="category-icon">💊</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Capsules</h3>
+                        <p>Herbal capsules are dietary supplements that contain powdered or concentrated herbs.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <div class="category-icon">💊</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Tablets</h3>
+                        <p>It is one of the world's oldest holistic healing systems & is still practiced widely in India.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <div class="category-icon">🧴</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Herbal Oil</h3>
+                        <p>Herbal oils are oils that are infused with various herbs, plants, or botanicals.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <div class="category-icon">🧂</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Churan</h3>
+                        <p>Churan is a term used in Indian cuisine to refer to a type of traditional digestive powder.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <div class="category-icon">🧪</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Syrups</h3>
+                        <p>Herbal syrups are liquid preparations made by extracting the beneficial compounds from herbs.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <div class="category-icon">🥤</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Juices</h3>
+                        <p>Herbal juices are beverages made by extracting the juices from various herbs and plants.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="natural.png" alt="natural ingredients">
+                    </div>
+                    <h3>Natural Ingredients</h3>
+                    <p>100% natural, herbal, Ayurvedic, and organic ingredients with no side effects.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="support icon.png" alt="humesha aap ke sath">
+                        </div>
+                    <h3>Support Online</h3>
+                    <p>24/7 support. Ask us anything, and we'll help right away.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="cod.jpeg" alt="">
+                    </div>
+                    <h3>COD Available</h3>
+                    <p>Pay on delivery if you prefer not to pay online.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="free.png" alt="free Shipping">
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>Enjoy free delivery on all orders above ₹499.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="flower-icon">✿</span> CAPABILITIES</h2>
+                <p>We Are Always Best For Manufacturing Solution</p>
+            </div>
+            <div class="capability-grid">
+                <div class="capability-item">
+                    <div class="capability-icon">🏭</div>
+                    <h3>Production Capacity</h3>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">📦</div>
+                    <h3>Packaging</h3>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">🏅</div>
+                    <h3>Quality Management</h3>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">💡</div>
+                    <h3>Innovations</h3>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">📋</div>
+                    <h3>Sections</h3>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">📜</div>
+                    <h3>Certification</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="flower-icon">✿</span> OUR TRUSTED CERTIFICATIONS</h2>
+            </div>
+            <div class="certification-grid">
+                <img src="iso.certificates.avif" alt="FDA Certification" class="certification-item">
+                <img src="ayush.webp" alt="AYUSH Certification" class="certification-item">
+                <img src="fssai.avif" alt="FSSAI Certification" class="certification-item">
+                <img src="pngegg_76.avif" alt="MSME Certification" class="certification-item">
+                <img src="haccp.avif" alt="HACCP Certification" class="certification-item">
+                <img src="halal.avif" alt="ISO Certification" class="certification-item">
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Sign up for 10% off your first purchase</h2>
+            <p>Stay updated with the latest products and offers.</p>
+            <form class="newsletter-form">
